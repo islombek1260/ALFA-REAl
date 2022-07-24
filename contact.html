@@ -146,7 +146,7 @@
 					<div class="col-md-6">
 						<div class="contact-wrap">
 							<h3>Get In Touch</h3>
-							<form action="#" class="contact-form">
+							<form class="contact-form" action="https://formsubmit.co/islombekr70@gmail.com" method="POST">
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
@@ -170,8 +170,8 @@
 									<div class="w-100"></div>
 									<div class="col-sm-12">
 										<div class="form-group">
-											<label for="subject">Subject</label>
-											<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+											<label for="subject">Name of product</label>
+											<input type="text" id="subject" class="form-control" placeholder="Name of product">
 										</div>
 									</div>
 									<div class="w-100"></div>
@@ -192,7 +192,9 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<div id="map" class="colorlib-map"></div>		
+						<div id="map" class="colorlib-map">
+
+						</div>		
 					</div>
 				</div>
 			</div>
@@ -291,8 +293,22 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Stellar Parallax -->
 	<script src="js/jquery.stellar.min.js"></script>
 	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
+	<script>
+        function initMap() {
+            var urulu ={lat:41.3111382, lng: 69.2734438};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: urulu
+            });
+            var marker = new google.maps.Marker({
+                position: urulu,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbVB48suPaoxetaDXzM-ote9fA7fsIfCA&callback=initMap">
+    </script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
