@@ -106,7 +106,7 @@ body {
 	font-family: $font-primary;
 	font-weight: 300;
 	font-size: 14px;
-	line-height: 1.8;
+	line-height: 2.5px;
 	color: lighten($black,35%);
 	background: $white;
 }
@@ -1094,7 +1094,7 @@ h1, h2, h3, h4, h5,
 				width: 48%;
 				display: inline-block;
 				&:first-child{
-					
+					font-weight: 500;
 				}
 				&:last-child{
 					font-weight: 500;
